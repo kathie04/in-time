@@ -1,0 +1,112 @@
+/* Base */
+
+/* ================================= */
+
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list>li {
+  position: relative;
+  padding-left: 32px;
+}
+
+.list>li::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 17px;
+  height: 1px;
+  opacity: 0.5;
+  background-color: currentColor;
+  opacity: 0.5;
+}
+
+.list-ordered {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: ordered;
+}
+
+.list-ordered>li::before {
+  counter-increment: ordered;
+  content: counter(ordered) ')';
+  margin-right: 4px;
+}
+
+/* Buttons */
+
+/* ================================= */
+
+button,
+input[type="button"],
+input[type="submit"],
+.button {
+  border-radius: 4px;
+}
+
+/* Forms */
+
+/* ================================= */
+
+input:not([type]),
+input[type=date],
+input[type=datetime-local],
+input[type=email],
+input[type=file],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type="month"],
+input[type=week],
+input[type=text],
+input[type=time],
+input[type=url],
+textarea,
+select {
+  border-radius: 4px;
+  border: solid 1px #c8c8c8;
+}
+
+input:not([type]):focus,
+input[type=date]:focus,
+input[type=datetime-local]:focus,
+input[type=email]:focus,
+input[type=file]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type="month"]:focus,
+input[type=week]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--global-primary-background);
+}
+
+.field-icon {
+  padding: 0;
+  background: none;
+}
+
+/* Table */
+
+/* ================================= */
+
+table {
+  font-size: 11px;
+}
+
+table thead th {
+  color: #7d7d7d;
+}
+
+table tbody tr:nth-child(odd) td {
+  background-color: #ececec;
+}
